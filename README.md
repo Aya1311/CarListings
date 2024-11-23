@@ -1,105 +1,119 @@
-PFA_CarListings: Automated Scraping and Analysis for Car Listings
-Overview
+# PFA_CarListings: Automated Scraping and Analysis for Car Listings
 
-This project is designed to scrape and analyze car listings from Moroccan platforms Avito.ma and Moteur.ma, creating an all-in-one e-commerce solution for used vehicles. It features a web application with separate front-end and back-end components connected via REST APIs.
-Repository Structure
+## Overview
+PFA_CarListings is a comprehensive e-commerce solution designed to scrape and analyze car listings from Moroccan platforms like **Avito.ma** and **Moteur.ma**. It integrates automated data collection, real-time data handling, and a Machine Learning-based recommendation system, all wrapped in a user-friendly web application with separate **front-end** and **back-end** components connected via REST APIs.
 
-    Backend: Django-based backend for data handling and API management.
-    Frontend: Angular-based frontend for user interaction.
-    Scripts: Web scraping scripts to automate data collection.
+---
 
-How to Run the Project
-Setup Backend
+## Repository Structure
+- **Backend**: 
+  - Built with Django for managing APIs and business logic.
+  - Handles web scraping, data storage, and recommendation systems.
+- **Frontend**: 
+  - Developed with Angular for an interactive and responsive user interface.
+  - Displays real-time car listings, filters, and recommendations.
+- **Scripts**: 
+  - Automates data scraping using tools like Selenium and Beautiful Soup.
 
-    Navigate to the backend directory:
+---
 
-cd ~/Bureau/PFA_V3_F/appcar_V7
+## How to Run the Project
 
-Set up the Python virtual environment:
+### Backend Setup
+1. **Navigate to the backend directory**:
+   ```bash
+   cd ~/Bureau/PFA_V3_F/appcar_V7
+2. **Set up a Python virtual environment**:
+    ```bash
+    python3 -m venv new_pfa
+    source new_pfa/bin/activate
 
-python3 -m venv new_pfa
-source new_pfa/bin/activate
+3. **Install necessary dependencies**:
+    ```bash
+    pip install kafka-python django django-cors-headers djangorestframework
+    pip install beautifulsoup4 scikit-learn selenium webdriver-manager panda pandas requests
 
-Install dependencies:
-
-pip install kafka-python
-pip install django
-pip install django-cors-headers
-pip install djangorestframework
-pip install beautifulsoup4
-pip install scikit-learn
-pip install selenium
-pip install webdriver-manager
-pip install panda
-pip install pandas
-pip install requests
-
-Run the backend server:
-
+4. **Run the backend server**:
+    ```bash
     python manage.py runserver
 
-Setup Frontend
+### Frontend Setup
 
-    Activate the virtual environment if not already active:
+1. **Ensure the virtual environment is activated**:
+    ```bash
+    source new_pfa/bin/activate
 
-source new_pfa/bin/activate
+2. **nstall Node.js and npm**:
+    ```bash
+    sudo apt install nodejs npm
 
-Install Node.js and npm:
+3. **Install Angular CLI globally**:
+    ```bash
+    sudo npm install -g @angular/cli
 
-sudo apt install nodejs npm
+4. **Navigate to the frontend directory and install dependencies**:
+    ```bash
+    cd ~/Bureau/PFA_V3_F/appcar_V7/frontend
+    npm install zone.js@~0.14.0
+    npm install
 
-Install Angular CLI globally:
-
-sudo npm install -g @angular/cli
-
-Navigate to the frontend directory and install dependencies:
-
-cd ~/Bureau/PFA_V3_F/appcar_V7/frontend
-npm install zone.js@~0.14.0
-npm install
-
-Start the Angular frontend:
-
+5.**Start the Angular frontend**:
+    ```bash
     ng serve
 
-Connecting Frontend and Backend
+### Connecting Frontend and Backend
 
-    The frontend is configured to automatically connect to the backend via REST APIs. Ensure both servers are running.
+The frontend is pre-configured to connect automatically to the backend through REST APIs. Ensure both the backend and frontend servers are running for full functionality.
 
-Kafka and Zookeeper (Optional for Scraping Integration)
+### Kafka and Zookeeper for Scraping Integration
 
-    Start Zookeeper:
+1. **Start Zookeeper**:
+    ```bash    
+    bin/zookeeper-server-start.sh config/zookeeper.properties
 
-bin/zookeeper-server-start.sh config/zookeeper.properties
-
-Start Kafka:
-
+2. **Start Kafka**:
+    ```bash
     bin/kafka-server-start.sh config/server.properties
 
-Features
+---
 
-    Backend:
-        RESTful APIs for managing car listings.
-        Machine Learning-based recommendation system.
-        Automated web scraping using Selenium and Beautiful Soup.
+### Features
+- **Backend**
 
-    Frontend:
-        User-friendly interface for browsing and comparing cars.
-        Real-time updates using Angular.
-        Integrated search and filtering options.
+    Provides RESTful APIs for managing car listings.
+    Features a Machine Learning-powered recommendation system.
+    Integrates automated web scraping using Beautiful Soup and Selenium.
 
-Technologies Used
+- **Frontend**
 
-    Backend: Django, REST framework, Kafka, Selenium.
+    Interactive and intuitive interface for browsing and filtering car listings.
+    Real-time data visualization and updates.
+    Features a car comparison tool and a recommendation engine.
+
+- **Technologies Used**
+
+    Backend: Django, Django REST framework, Kafka, Selenium.
     Frontend: Angular, Zone.js.
-    Big Data: Kafka for real-time data handling.
+    Big Data Integration: Kafka for real-time data handling.
     Web Scraping: Beautiful Soup, Selenium.
 
-Acknowledgments
+---
 
-Special thanks to:
+### Author and Acknowledgments
 
-    Prof. Marzak Abdelaziz for mentorship and guidance.
-    The Hassan II University community for their support.
+This project was created by **Aya Laadaili** as part of the Master’s program in **Big Data and Data Science** at Hassan II University of Casablanca.
 
-For any contributions or issues, please raise them in this repository.
+I would like to express my heartfelt gratitude to:
+
+- **Prof. Marzak Abdelaziz** for his invaluable mentorship and guidance throughout this project.
+- The **Hassan II University of Casablanca** for providing support and resources.
+
+---
+
+### Contributions
+
+For any contributions, issues, or suggestions, please feel free to:
+
+- Open an issue on this repository.
+- Submit a pull request with your improvements or suggestions.
+
