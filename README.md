@@ -57,13 +57,14 @@ PFA_CarListings is a comprehensive e-commerce solution designed to scrape and an
     npm install zone.js@~0.14.0
     npm install
 
-5.**Start the Angular frontend**:
-    ```bash
-    ng serve
+5. **Start the Angular frontend**:
+   ```bash
+   ng serve
 
 ### Connecting Frontend and Backend
 
 The frontend is pre-configured to connect automatically to the backend through REST APIs. Ensure both the backend and frontend servers are running for full functionality.
+After running the command, the frontend will be accessible in your browser at: http://localhost:4200
 
 ### Kafka and Zookeeper for Scraping Integration
 
