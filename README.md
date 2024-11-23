@@ -22,7 +22,7 @@ PFA_CarListings is a comprehensive e-commerce solution designed to scrape and an
 ### Backend Setup
 1. **Navigate to the backend directory**:
    ```bash
-   cd ~/Bureau/PFA_V3_F/appcar_V7
+   cd ~/Bureau/CarListings/Backend
 2. **Set up a Python virtual environment**:
     ```bash
     python3 -m venv new_pfa
@@ -53,13 +53,13 @@ PFA_CarListings is a comprehensive e-commerce solution designed to scrape and an
 
 4. **Navigate to the frontend directory and install dependencies**:
     ```bash
-    cd ~/Bureau/PFA_V3_F/appcar_V7/frontend
+    cd ~/Bureau/CarListings/Frontend/frontend
     npm install zone.js@~0.14.0
     npm install
 
 5. **Start the Angular frontend**:
-   ```bash
-   ng serve
+     ```bash
+     ng serve
 
 ### Connecting Frontend and Backend
 
