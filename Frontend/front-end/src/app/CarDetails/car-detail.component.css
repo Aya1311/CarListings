@@ -1,0 +1,84 @@
+.car-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.car-detail-header h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.car-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.car-detail-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.car-detail-info div {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 10px;
+}
+
+.car-detail-info div span {
+  font-weight: bold;
+}
+
+.car-detail-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #00b0b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #008d92;
+}
+
+.view-original-button {
+  padding: 10px 20px;
+  background-color: #3691b0;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.view-original-button:hover {
+  background-color: #29728e;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

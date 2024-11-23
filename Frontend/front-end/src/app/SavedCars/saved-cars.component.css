@@ -1,0 +1,71 @@
+.saved-cars-container {
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .back-button {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    background-color: #3691b0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back-button:hover {
+    background-color: #2a6f8c;
+  }
+  
+  .car-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .car-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 16px;
+  }
+  
+  .car-details {
+    flex-grow: 1;
+  }
+  
+  .car-details h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .car-details p {
+    margin: 4px 0;
+    color: #666;
+  }
+  
+  .view-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3691b0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .view-link:hover {
+    color: #2a6f8c;
+    text-decoration: underline;
+  }
+  

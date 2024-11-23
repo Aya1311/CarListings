@@ -1,0 +1,64 @@
+<!--compare.component.html-->
+<div *ngIf="car1 && car2" class="compare-container">
+  <div class="compare-header">
+    <h2>Comparaison de {{car1.title}} et {{car2.title}}</h2>
+  </div>
+  <div class="compare-table">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>{{car1.title}}</th>
+          <th>{{car2.title}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Prix</td>
+          <td>{{car1.price}}</td>
+          <td>{{car2.price}}</td>
+        </tr>
+        <tr>
+          <td>Carburant</td>
+          <td>{{car1.carburant}}</td>
+          <td>{{car2.carburant}}</td>
+        </tr>
+        <tr>
+          <td>Boite</td>
+          <td>{{car1.boite}}</td>
+          <td>{{car2.boite}}</td>
+        </tr>
+        <tr>
+          <td>Kilometrage</td>
+          <td>{{car1.kilometrage}}</td>
+          <td>{{car2.kilometrage}}</td>
+        </tr>
+        <tr>
+          <td>Année</td>
+          <td>{{car1.year}}</td>
+          <td>{{car2.year}}</td>
+        </tr>
+        <tr>
+          <td>Ville</td>
+          <td>{{car1.ville}}</td>
+          <td>{{car2.ville}}</td>
+        </tr>
+        <tr>
+          <td>Nombre de portes</td>
+          <td>{{car1.nombre_de_portes}}</td>
+          <td>{{car2.nombre_de_portes}}</td>
+        </tr>
+        <tr>
+          <td>Autheur</td>
+          <td>{{car1.autor}}</td>
+          <td>{{car2.autor}}</td>
+        </tr>
+        <tr>
+          <td>Etat</td>
+          <td>{{car1.etat}}</td>
+          <td>{{car2.etat}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

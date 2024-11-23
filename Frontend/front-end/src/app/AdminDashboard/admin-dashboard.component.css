@@ -1,0 +1,196 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+.app-header {
+    width: 100%;
+    padding: 15px;
+    background-color: #4a90e2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logo-title {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.slogan {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.logout-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+}
+
+.app-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 60px);
+}
+
+/* Style pour la section de services */
+.service-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Style pour chaque tuile */
+.tile {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Style pour l'en-tête de la tuile */
+.tile-header {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tile-header i {
+    font-size: 2rem;
+    color: #00b0b3; /* Couleur de l'icône */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tile-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.tile-header span {
+    display: block;
+}
+
+#total-clients, #total-ads {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #3691b0; /* Couleur du total */
+}
+
+/* Style pour la section des transferts */
+.transfer-section {
+    margin-top: 20px;
+}
+
+.transfer-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.create-admin-button, .download-csv-button {
+    background-color: #4a90e2;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.create-admin-button:hover, .download-csv-button:hover {
+    background-color: #357abd;
+}
+
+/* Style pour les tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+/* Footer styles */
+.app-footer {
+    width: 100%;
+    padding: 10px;
+    background-color: #003d4d;
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+}

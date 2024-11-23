@@ -1,0 +1,28 @@
+<!-- recommended-cars.component.html -->
+<div class="dashboard-container">
+  <header class="header">
+    <h1>Voitures Recommandées</h1>
+  </header>
+  <div class="main-content">
+    <div class="content">
+      <div class="car-list">
+        <div *ngFor="let car of displayedCars" class="car-item">
+          <div class="car-image-container">
+            <img [src]="car.image_url" alt="{{car.title}}" />
+          </div>
+          <h3>{{car.title}}</h3>
+          <p>{{car.price}}</p>
+          <div class="car-actions">
+            <button class="view-detail-button" (click)="viewCarDetail(car.id_car)">Voir les détails</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="load-more-button" (click)="loadMore()">Charger plus</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 My Car Voiture d'occasion. Tous droits réservés.</p>
+  </footer>
+</div>

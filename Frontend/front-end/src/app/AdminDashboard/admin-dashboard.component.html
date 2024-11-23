@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{% csrf_token %}">
+    <title>Dashboard Admin - MyCar</title>
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="../favicon.jpeg" alt="Logo MyCar" class="logo-icon">
+                <h1 class="logo-title">MyCar Admin Dashboard</h1>
+            </div>
+            <p class="slogan">Gestion et Analyse Simplifiée</p>
+            <a href="" class="logout-button">Déconnexion</a>
+        </div>
+    </header>
+
+    <div class="app-body">
+        <main class="app-body-main-content">
+            <section class="service-section">
+                <div class="tile">
+                    <div class="tile-header">
+                        <i class="ph-lightning-light"></i>
+                        <h3>
+                            <span>Nbr Totale Clients </span>
+                            <span id="total-clients">0</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-header">
+                        <i class="ph-fire-simple-light"></i>
+                        <h3>
+                            <span>Nbr Totale Annonces</span>
+                            <span id="total-ads">0</span>
+                        </h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="transfer-section">
+                <div class="transfer-section-header">
+                    <h2>Tableau Administrateurs</h2>
+                    <div class="admin-controls">
+                        <input type="text" placeholder="Rechercher par nom" class="search-bar" (input)="filterAdmins($event)">
+                        <button (click)="createAdmin()" class="create-admin-button">Créer Administrateur</button>
+                        <button (click)="downloadAdminsCSV()" class="download-csv-button">Télécharger CSV</button>
+                    </div>
+                </div>
+                <div class="transfers">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let admin of filteredAdmins">
+                                <td>{{ admin.user.id }}</td>
+                                <td>{{ admin.user.username }}</td>
+                                <td>{{ admin.user.email }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="transfer-section">
+                <div class="transfer-section-header">
+                    <h2>Tableau Clients</h2>
+                    <div class="admin-controls">
+                        <button (click)="downloadClientsCSV()" class="download-csv-button">Télécharger CSV</button>
+                    </div>
+                </div>
+                <div class="transfers">
+                    <table>
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Email</th> 
+                            <th>Âge</th>
+                            <th>Budget Min</th>
+                            <th>Budget Max</th>
+                            <th>Boîte Préférée</th>
+                            <th>Carburant Préféré</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let client of filteredClients">
+                            <td>{{ client.id }}</td>
+                            <td>{{ client.username }}</td>
+                            <td>{{ client.email }}</td>
+                            <td>{{ client.age }}</td>
+                            <td>{{ client.budget_min }}</td>
+                            <td>{{ client.budget_max }}</td>
+                            <td>{{ client.boite_preferee }}</td>
+                            <td>{{ client.carburant_prefere }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="app-footer">
+        <p>&copy; 2024 MyCar. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

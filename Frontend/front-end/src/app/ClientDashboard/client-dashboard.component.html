@@ -1,0 +1,57 @@
+<!-- client-dashboard.component.html -->
+<div class="dashboard-container">
+  <header class="header">
+    <h1>Bienvenue sur My Car Voiture d'occasion</h1>
+  </header>
+
+  <div class="main-content">  
+    <nav class="sidebar">
+      <button class="nav-button" (click)="navigateTo('saved-cars')">Voitures enregistrées</button>
+      <button class="nav-button" (click)="navigateTo('site-suggestions')">Suggestions du site</button>
+      <button class="compare-button" (click)="compareSelectedCars()">Compare</button>
+      <button class="logout-button" (click)="logout()">Déconnexion</button>
+    </nav>
+
+    <div class="content">
+      <div class="filter-section">
+        <input [(ngModel)]="filters.title" (input)="applyFilters()" placeholder="Titre" />
+        <select [(ngModel)]="filters.carburant" (change)="applyFilters()">
+          <option value="">Tous</option>
+          <option value="Essence ">Essence </option>
+          <option value="Diesel ">Diesel</option>
+          <option value="Hybride ">Hybride </option>
+        </select>
+        <select [(ngModel)]="filters.boite" (change)="applyFilters()">
+          <option value="">Tous</option>
+          <option value="Manuelle ">Manuelle</option>
+          <option value="Automatique ">Automatique</option>
+        </select>
+        <input type="number" [(ngModel)]="filters.year" (input)="applyFilters()" placeholder="Année" />
+        <input [(ngModel)]="filters.ville" (input)="applyFilters()" placeholder="Ville" />
+        <input type="number" [(ngModel)]="filters.minPrice" (input)="applyFilters()" placeholder="Prix Min" />
+        <input type="number" [(ngModel)]="filters.maxPrice" (input)="applyFilters()" placeholder="Prix Max" />
+      </div>
+
+      <div class="car-list">
+        <div *ngFor="let car of displayedCars" class="car-item">
+          <div class="car-image-container">
+            <img [src]="car.image_url" alt="{{car.title}}" />
+          </div>
+          <h3>{{car.title}}</h3>
+          <p>{{car.price}}</p>
+          <div class="car-actions">
+            <input type="checkbox" (change)="onCarSelectionChange(car, $event)" />
+            <button class="save-button" (click)="saveCar(car)">Enregistrer</button>
+            <button class="view-detail-button" (click)="viewCarDetail(car.id_car)">Voir les détails</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="load-more-button" (click)="loadMore()">Charger plus</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 My Car Voiture d'occasion. Tous droits réservés.</p>
+  </footer>
+</div>

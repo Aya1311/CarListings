@@ -1,0 +1,205 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0; /* Ensure no default margin on body */
+}
+
+/* Header styles */
+.header {
+  background-color: #00b0b3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0; /* Remove margin below header */
+}
+
+.compare-button {
+  background-color: #3691b0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.compare-button:hover {
+  background-color: #0000b3;
+}
+
+/* Main content styles */
+.main-content {
+  display: flex;
+  flex: 1;
+  margin: 0; /* Remove margin between header and body */
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #003d4d;
+  color: white;
+  padding: 20px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+  background-color: #1d9b91;
+  border: none;
+  color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #00b0b3;
+  color: white;
+}
+
+/* Special logout button style */
+.logout-button {
+  background-color: #6e0f1a; 
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  margin-top: 45px; 
+}
+
+.logout-button:hover {
+  background-color: #cc0000;
+}
+
+/* Content styles */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Filter section styles */
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: #add8e6;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex: 1;
+}
+
+/* Car list styles */
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Car item styles */
+.car-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.car-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.car-image-container img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-item h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.car-item p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.car-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.save-button,
+.view-detail-button {
+  padding: 10px 15px;
+  background-color: #00b0b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover,
+.view-detail-button:hover {
+  background-color: #008d92;
+}
+
+/* Load more button styles */
+.load-more-button {
+  padding: 10px 20px;
+  background-color: #3691b0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.load-more-button:hover {
+  background-color: #29728e;
+}
+
+.footer {
+  background-color: #00b0b3;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}

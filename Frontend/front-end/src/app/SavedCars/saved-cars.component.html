@@ -1,0 +1,24 @@
+<!-- saved-cars.component.html -->
+<div class="saved-cars-container">
+    <h2>Voitures Enregistrées</h2>
+    <div *ngIf="savedCars.length > 0; else noCars">
+      <div *ngFor="let car of savedCars" class="car-card">
+        <img [src]="car.image_url" alt="Car Image" class="car-image">
+        <div class="car-details">
+          <h3>{{ car.title }}</h3>
+          <p>Prix: {{ car.price }}</p>
+          <p>Carburant: {{ car.carburant }}</p>
+          <p>Boîte: {{ car.boite }}</p>
+          <p>Kilométrage: {{ car.kilometrage }}</p>
+          <p>Année: {{ car.year }}</p>
+          <p>Ville: {{ car.ville }}</p>
+          <a [href]="car.url" target="_blank" class="view-link">Voir l'annonce</a>
+        </div>
+      </div>
+    </div>
+    <ng-template #noCars>
+      <p>Aucune voiture enregistrée.</p>
+    </ng-template>
+  </div>
+  
+  

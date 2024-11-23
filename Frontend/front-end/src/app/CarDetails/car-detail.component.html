@@ -1,0 +1,23 @@
+<!-- car-detail.component.html -->
+<div *ngIf="car" class="car-detail-container">
+  <div class="car-detail-header">
+    <h2>{{car.title}}</h2>
+  </div>
+  <img [src]="car.image_url" alt="{{car.title}}" class="car-detail-image" />
+  <div class="car-detail-info">
+    <div><span>Prix:</span> {{car.price}}</div>
+    <div><span>Carburant:</span> {{car.carburant}}</div>
+    <div><span>Boite:</span> {{car.boite}}</div>
+    <div><span>Puissance fiscale:</span> {{car.puissance_fiscale}}</div>
+    <div><span>Kilometrage:</span> {{car.kilometrage}}</div>
+    <div><span>Année:</span> {{car.year}}</div>
+    <div><span>Ville:</span> {{car.ville}}</div>
+    <div><span>Nombre de porte:</span> {{car.nombre_de_portes}}</div>
+    <div><span>Autheur d'annonce d'origine:</span> {{car.autor}}</div>
+    <div><span>Etat de voiture:</span> {{car.etat}}</div>
+  </div>
+  <div class="car-detail-actions">
+    <a [href]="car.url" target="_blank" class="view-original-button">Annonce Originale</a>
+  </div>
+</div>
+
