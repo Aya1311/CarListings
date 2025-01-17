@@ -137,8 +137,7 @@ After running the command, the frontend will be accessible in your browser at: h
 
 ---
 
-### Author and Acknowledgments
+### Author 
 
-This project was created by **Aya Laadaili** as part of the Master’s program in **Big Data and Data Science** at Hassan II University of Casablanca.
-
+*Aya Laadaili**
 ---
