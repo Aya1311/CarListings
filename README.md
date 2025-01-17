@@ -1,7 +1,7 @@
-# PFA_CarListings: Automated Scraping and Analysis for Car Listings
+# CarListings: Automated Scraping and Analysis for Car Listings
 
 ## Overview
-PFA_CarListings is a comprehensive e-commerce solution designed to scrape and analyze car listings from Moroccan platforms like **Avito.ma** and **Moteur.ma**. It integrates automated data collection, real-time data handling, and a Machine Learning-based recommendation system, all wrapped in a user-friendly web application with separate **front-end** and **back-end** components connected via REST APIs.
+CarListings is a comprehensive e-commerce solution designed to scrape and analyze car listings from Moroccan platforms like **Avito.ma** and **Moteur.ma**. It integrates automated data collection, real-time data handling, and a Machine Learning-based recommendation system, all wrapped in a user-friendly web application with separate **front-end** and **back-end** components connected via REST APIs.
 
 ---
 
@@ -17,49 +17,86 @@ PFA_CarListings is a comprehensive e-commerce solution designed to scrape and an
 
 ---
 
-## How to Run the Project
+# PFA CarListings
 
-### Backend Setup
+This project is a platform for car listings built with a Django backend and an Angular frontend.
+
+## **How to Run the Project**
+
+### **Clone the Repository**
+
+```bash
+git clone https://github.com/Aya1311/PFA_CarListings.git
+cd PFA_CarListings
+```
+
+---
+
+### **Backend Setup**
+
 1. **Navigate to the backend directory**:
+
    ```bash
-   cd ~/Bureau/CarListings/Backend
+   cd Backend
+   ```
+
 2. **Set up a Python virtual environment**:
-    ```bash
-    python3 -m venv new_pfa
-    source new_pfa/bin/activate
+
+   ```bash
+   python3 -m venv new_pfa
+   source new_pfa/bin/activate
+   ```
 
 3. **Install necessary dependencies**:
-    ```bash
-    pip install kafka-python django django-cors-headers djangorestframework
-    pip install beautifulsoup4 scikit-learn selenium webdriver-manager panda pandas requests
+
+   ```bash
+   pip install kafka-python django django-cors-headers djangorestframework
+   pip install beautifulsoup4 scikit-learn selenium webdriver-manager pandas requests
+   ```
 
 4. **Run the backend server**:
-    ```bash
-    python manage.py runserver
 
-### Frontend Setup
+   ```bash
+   python manage.py runserver
+   ```
 
-1. **Ensure the virtual environment is activated**:
-    ```bash
-    source new_pfa/bin/activate
+---
 
-2. **nstall Node.js and npm**:
-    ```bash
-    sudo apt install nodejs npm
+### **Frontend Setup**
+
+1. **Ensure the backend virtual environment is activated**:
+
+   ```bash
+   source new_pfa/bin/activate
+   ```
+
+2. **Install Node.js and npm** (if not already installed):
+
+   ```bash
+   sudo apt install nodejs npm
+   ```
 
 3. **Install Angular CLI globally**:
-    ```bash
-    sudo npm install -g @angular/cli
+
+   ```bash
+   sudo npm install -g @angular/cli
+   ```
 
 4. **Navigate to the frontend directory and install dependencies**:
-    ```bash
-    cd ~/Bureau/CarListings/Frontend/frontend
-    npm install zone.js@~0.14.0
-    npm install
+
+   ```bash
+   cd ../Frontend/frontend
+   npm install zone.js@~0.14.0
+   npm install
+   ```
 
 5. **Start the Angular frontend**:
-     ```bash
-     ng serve
+
+   ```bash
+   ng serve
+   ```
+
+---
 
 ### Connecting Frontend and Backend
 
@@ -104,17 +141,4 @@ After running the command, the frontend will be accessible in your browser at: h
 
 This project was created by **Aya Laadaili** as part of the Master’s program in **Big Data and Data Science** at Hassan II University of Casablanca.
 
-I would like to express my heartfelt gratitude to:
-
-- **Prof. Marzak Abdelaziz** for his invaluable mentorship and guidance throughout this project.
-- The **Hassan II University of Casablanca** for providing support and resources.
-
 ---
-
-### Contributions
-
-For any contributions, issues, or suggestions, please feel free to:
-
-- Open an issue on this repository.
-- Submit a pull request with your improvements or suggestions.
-
