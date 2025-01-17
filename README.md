@@ -26,8 +26,8 @@ This project is a platform for car listings built with a Django backend and an A
 ### **Clone the Repository**
 
 ```bash
-git clone https://github.com/Aya1311/PFA_CarListings.git
-cd PFA_CarListings
+git clone https://github.com/Aya1311/CarListings.git
+cd CarListings
 ```
 
 ---
