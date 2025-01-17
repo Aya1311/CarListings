@@ -139,5 +139,5 @@ After running the command, the frontend will be accessible in your browser at: h
 
 ### Author 
 
-*Aya Laadaili**
+*Aya Laadaili*
 ---
